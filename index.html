@@ -7,36 +7,45 @@
         <title>Calculator</title>
     </head>
     <body>
-        <div class="container">
-            <input type="text" class="display" />
-            <!-- Add your classes or ids -->
-            <div class="buttons">
-                <button>AC</button>
-                <button>DEL</button>
-                <button>%</button>
-                <button>/</button>
+        <!-- Calculator container -->
+        <div class="calculator">
+            <!-- Display input -->
+            <input type="text" id="display" readonly />
 
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
-                <button>*</button>
+            <!-- Calculator buttons -->
 
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
-                <button>-</button>
-
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>+</button>
-
-                <button>0</button>
-                <button>00</button>
-                <button>.</button>
-                <button></button>
-            </div>
+            <!-- Buttons for digits and operators -->
+            <table>
+                <tr>
+                    <td class="numbers">
+                        <div class="buttons">
+                            <button onclick="appendToDisplay('1')">1</button>
+                            <button onclick="appendToDisplay('2')">2</button>
+                            <button onclick="appendToDisplay('3')">3</button>
+                            <button onclick="appendToDisplay('4')">4</button>
+                            <button onclick="appendToDisplay('5')">5</button>
+                            <button onclick="appendToDisplay('6')">6</button>
+                            <button onclick="appendToDisplay('7')">7</button>
+                            <button onclick="appendToDisplay('8')">8</button>
+                            <button onclick="appendToDisplay('9')">9</button>
+                            <button onclick="appendToDisplay('0')">0</button>
+                        </div>
+                    </td>
+                    <td class="operations">
+                        <button onclick="appendToDisplay('+')">+</button>
+                        <button onclick="appendToDisplay('-')">-</button>
+                        <button onclick="appendToDisplay('*')">*</button>
+                        <button onclick="appendToDisplay('.')">.</button>
+                        <button onclick="appendToDisplay('/')">/</button>
+                        <!-- Special buttons -->
+                        <button onclick="clearDisplay()">C</button>
+                        <button onclick="calculate()">=</button>
+                    </td>
+                </tr>
+            </table>
         </div>
+
+        <!-- External JavaScript file -->
         <script src="./src/main.js"></script>
     </body>
 </html>

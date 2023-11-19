@@ -15,3 +15,103 @@ body {
 }
 
 /* Add your css  */
+
+/* Apply a flex layout to center the content vertically and horizontally */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Style for the calculator container */
+.calculator {
+    text-align: center;
+}
+
+table {
+    border-radius: 5px;
+    background: #444;
+    border: 1px;
+    margin: auto;
+}
+
+.numbers,
+.operations {
+    width: auto;
+    height: 100%;
+    border: 1px;
+}
+
+/* Style for the display input */
+input {
+    width: 296px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    border: 5px solid #444;
+    border-radius: 5px;
+}
+
+/* Style for the calculator buttons */
+button {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* Use a grid layout for the buttons */
+.buttons {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.operations {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Media query for smaller screens (max-width: 600px) */
+@media only screen and (max-width: 800px) {
+    /* Adjust the width of the input for better visibility on smaller screens */
+    input {
+        width: 80%;
+    }
+
+    /* Adjust button size and font size for better touch interaction */
+    button {
+        margin: 5px;
+        width: auto;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    /* Adjust the grid layout to two columns for better arrangement on smaller screens */
+    .buttons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* Media query for smaller screens (max-width: 500px) */
+@media only screen and (max-width: 500px) {
+    /* Adjust the width of the input for better visibility on smaller screens */
+    input {
+        width: 80%;
+    }
+
+    /* Adjust button size and font size for better touch interaction */
+    button {
+        margin: 5px;
+        width: auto;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    /* Adjust the grid layout to two columns for better arrangement on smaller screens */
+    .buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
